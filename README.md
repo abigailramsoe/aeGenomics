@@ -58,7 +58,7 @@ Git is a version-control system software for tracking changes in a set of files,
 
 
 ```sh
-$ git clone https://github.com/ANGSD/adv_binf_2021_week1
+$ git clone https://github.com/ANGSD/adv_binf_2022_week1
 $ cd adv_binf_2022_week1/day1
 # gunzip files
 $ make unzip
