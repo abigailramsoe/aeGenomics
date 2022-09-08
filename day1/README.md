@@ -16,7 +16,7 @@
 
 
 
-Class working directory: `/TEACHING/BIOINF21/adv_binf_2021_week1`
+Class working directory: `/TEACHING/BIOINF22/adv_binf_2022_week1`
 
 
 
@@ -49,7 +49,7 @@ $ ssh -X isin@ricco.popgen.dk
 ### Setting up the working environment
 
 
-If you are working on the ricco server, and therefore will not be not clonning the repository, all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF21/adv_binf_2021_week1`
+If you are working on the ricco server, and therefore will not be not clonning the repository, all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF22/adv_binf_2022_week1`
 
 ```sh
 day1
@@ -72,8 +72,8 @@ Git is a version-control system software for tracking changes in a set of files,
 
 
 ```sh
-$ git clone https://github.com/isinaltinkaya/adv_binf_2021_week1
-$ cd adv_binf_2021_week1/day1
+$ git clone https://github.com/isinaltinkaya/adv_binf_2022_week1
+$ cd adv_binf_2022_week1/day1
 # gunzip files
 $ make unzip
 # copy reference files
@@ -189,7 +189,14 @@ wget 'ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_as
 bwa index hs37d5.fa.gz
 samtools faidx hs37d5.fa.gz
 ```
-
+NB: The newer version of samtools and bcftools requires that files are compressed with bgzip rather than standard gzip. Therefore you need to uncompressed and recompress.
+```
+gunzip chr21.fa.gz
+bgzip chr21.fa
+#or
+mv chr21.fa.gz tmp.gz
+gunzip -c tmp.gz |bgzip -c >tmp.fa.gz
+```
 ___
 ___
 ___
