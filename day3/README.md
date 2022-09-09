@@ -27,16 +27,18 @@ You can either copy the four sequencing files and the reference genome into your
 Before you try with the different commands, you should try to run them with no arguments - this will show you the help page giving you an explanation of the different parameters and examples on how to run the command. 
 
 ## Part 1 - Exact alignment (Rabin-Karp):
+### Pen and paper
 Consider the text=”ACGTAACGTAACGA” and pattern=”TAACG”.
 
 1. What is the length of the strings and what is the size of the alphabet
 2. How many shifts and how many comparisons do we need to do in order to perform an exhaustive naive search
 3. Consider the Rabin-Karp algorithm and define a rolling hash function
 4. Argue that your choice of rolling hash function is indeed a rolling hash function
-5. Compute the hash of the pattern and the hash of each shift
+5. Calculate the hash of the pattern and the hash of each shift
 6. How many operations did the exhaustive search with the Rabin-Karp algorithm require?
 
 ## Part 2 - Data structures:
+### Pen and paper
 The goal with part of the assignment is to get familiar with the string operations needed to construct the data structures which several modern day alignment algorithms utilize.
 
 Consider the sequence T=”DINGELINGDING”
