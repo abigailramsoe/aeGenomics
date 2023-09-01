@@ -4,7 +4,7 @@ In this exercise you will get acquainted with the "bwa" mapper and the "samtools
 We will use a subset of the human genome, chromosome 21, as a reference genome, to keep the CPU load and waiting time lower. 
 The sequencing files you will need to map are single-end NGS data of a human individual.
 
-## The data are located on ricco.popgen.dk at /ricco/data/ex3/
+## The data are located on ricco.popgen.dk at /emily/data/ex3/
 ~~~bash
 NA19238.fastq.gz
 chr21.fa.gz
