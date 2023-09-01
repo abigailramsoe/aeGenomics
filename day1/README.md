@@ -16,7 +16,7 @@
 
 
 
-Class working directory: `/TEACHING/BIOINF22/adv_binf_2022_week1`
+Class working directory: `/TEACHING/BIOINF23/adv_binf_2023_week1`
 
 
 
@@ -40,7 +40,7 @@ Replace with your remote server username. For example:
 
 
 ```sh
-$ ssh -X isin@ricco.popgen.dk
+$ ssh -X isin@emily.popgen.dk
 ```
 
 
@@ -49,7 +49,7 @@ $ ssh -X isin@ricco.popgen.dk
 ### Setting up the working environment
 
 
-If you are working on the ricco server, and therefore will not be not clonning the repository, all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF22/adv_binf_2022_week1`
+You will be working on the emily server. all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF23/adv_binf_2023_week1`
 
 ```sh
 day1
@@ -68,7 +68,7 @@ day1
 └── README.md
 ```
 
-Git is a version-control system software for tracking changes in a set of files, and is useful for coordinating work among multiple people working in collaboration. GitHub is one of the most popular git repository hosting services. Git is not covered within the scope of this class, and will only be used for downloading the exercise materials. To learn more about git and GitHub, see [GithHub Lab](https://lab.github.com/) (optional).
+Git is a version-control system software for tracking changes in a set of files, and is useful for coordinating work among multiple people working in collaboration. GitHub is one of the most popular git repository hosting services. Git is not covered within the scope of this classs, and will only be used for downloading the exercise materials. To learn more about git and GitHub, see [GithHub Lab](https://lab.github.com/) (optional).
 
 
 ```sh
@@ -421,7 +421,7 @@ firefox --no-remote fastp.html
 
 Alternatively, you can use `scp` to download the output html file to your local machine
 ```sh
-scp isin@ricco.popgen.dk:/PATH_TO/fastp.html .
+scp isin@emily.popgen.dk:/PATH_TO/fastp.html .
 ```
 **3.1. What is the proportion of reads with residual adapters?**
 ```sh
