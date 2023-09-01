@@ -3,7 +3,7 @@ In this exercise you will get acquainted with the "bwa" mapper and the "samtools
 
 The sequencing files you will need to map are single-end NGS data of a pathogen.
 
-## The data are located on ricco.popgen.dk at /TEACHING/BIOINF22/adv_binf_2022_week1/day3
+## The data are located on emily.popgen.dk at /TEACHING/BIOINF23/adv_binf_2023_week1/day3
 
 The reference genome, Mycobacterium_leprae.fa.gz, contains a consensus representation of the target organism.
 
