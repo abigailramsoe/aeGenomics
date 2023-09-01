@@ -5,9 +5,9 @@
 
 Day | Time |  Subject | Lecturer
 --- | --- | --- | ---
-Day 1 - Monday | 9:15 - 12 | NGS data - Workflow, formats and programs | Thorfinn Sand Korneliussen,<br/> Exercises: Isin Altinkaya
+Day 1 - Monday | 9:15 - 12 | NGS data - Workflow, formats and programs | Thorfinn Sand Korneliussen
 Day 2 - Tuesday | 13:15 - 16 | Mapping - Suffix arrays and Burrows-Wheeler Transform | Rasmus A. Henriksen
-Day 3 - Friday | 9:15 - 12 | Uncertainty and exercise conclusions | Thorfinn/Rasmus/Abigail
+Day 3 - Friday | 9:15 - 12 | K-mers and metagenomic sequence classification | Abigail Ramsøe
 
 
 # Getting started
@@ -26,7 +26,7 @@ Replace with your remote server username. For example:
 
 
 ```sh
-$ ssh -X isin@ricco.popgen.dk
+$ ssh -X isin@emily.popgen.dk
 ```
 
 
@@ -35,7 +35,7 @@ $ ssh -X isin@ricco.popgen.dk
 ## Setting up the working environment
 
 
-If you are working on the ricco server, and therefore will not be not clonning the repository, all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF22/adv_binf_2022_week1`
+If you are working on the emily server, all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF23/adv_binf_2023_week1`
 
 ```sh
 day1
@@ -54,15 +54,4 @@ day1
 └── README.md
 ```
 
-Git is a version-control system software for tracking changes in a set of files, and is useful for coordinating work among multiple people working in collaboration. GitHub is one of the most popular git repository hosting services. Git is not covered within the scope of this class, and will only be used for downloading the exercise materials. To learn more about git and GitHub, see [GithHub Lab](https://lab.github.com/) (optional).
-
-
-```sh
-$ git clone https://github.com/ANGSD/adv_binf_2022_week1
-$ cd adv_binf_2022_week1/day1
-# gunzip files
-$ make unzip
-# copy reference files
-$ make copy
-```
 
