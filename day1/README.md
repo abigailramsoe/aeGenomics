@@ -68,16 +68,11 @@ day1
 └── README.md
 ```
 
-Git is a version-control system software for tracking changes in a set of files, and is useful for coordinating work among multiple people working in collaboration. GitHub is one of the most popular git repository hosting services. Git is not covered within the scope of this classs, and will only be used for downloading the exercise materials. To learn more about git and GitHub, see [GithHub Lab](https://lab.github.com/) (optional).
+Git is a version-control system software for tracking changes in a set of files, and is useful for coordinating work among multiple people working in collaboration. GitHub is one of the most popular git repository hosting services. Git is not covered within the scope of this class.
 
-
+Copy data to your local home folder
 ```sh
-$ git clone https://github.com/isinaltinkaya/adv_binf_2022_week1
-$ cd adv_binf_2022_week1/day1
-# gunzip files
-$ make unzip
-# copy reference files
-$ make copy
+$ cp -r /TEACHING/BIOINF23/adv_binf_2023_week1 .
 ```
 
 ___
