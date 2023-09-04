@@ -53,8 +53,6 @@ jessica.fastq.gz
 fletcher.fastq.gz 
 ~~~
 
-One of these files is ancient, and one is modern. They are both reads from the pathogen <i>Pseudomonas aeruginosa</i> (reference genome fasta: paeruginosa.fasta.gz)
-
 The goal is to ascertain which of the files (Jessica or Fletcher) belongs to the modern or ancient sample. For this exercise, you can look at the computer exercises from day1 and day2 for inspirations (https://github.com/ANGSD/adv_binf_2023_week1/tree/main/day1 and https://github.com/ANGSD/adv_binf_2023_week1/tree/main/day2) 
 
 ## Questions:
@@ -65,7 +63,7 @@ The goal is to ascertain which of the files (Jessica or Fletcher) belongs to the
 
 3. What is the mean length of the reads before and after trimming?
 
-4. Perform bwa alignment using aln and samse. For each sample, sort the sam file, save it as a bam, and index it. Remember that the reference is not the same as the previous exercise. 
+4. Perform bwa alignment using aln and samse. For each sample, sort the sam file, save it as a bam, and index it. Remember that the reference is the same as the previous exercise. 
    
 6. For each sample, create new bam files with only the aligned reads. What proportion of reads remain?
    
