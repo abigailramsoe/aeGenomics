@@ -1,25 +1,8 @@
 # Computer exercises day 3
-In this exercise you will get acquainted with the "bwa" mapper and the "samtools" program to interpret sam files, as well as misalignments
 
-The sequencing files you will need to map are single-end NGS data of a pathogen.
+The sequencing files you will need to map are single-end NGS data two different pathogens.
 
 ## The data is located on emily.popgen.dk at /TEACHING/BIOINF23/adv_binf_2023_week1/day3
-
-The reference genome, Mycobacterium_leprae.fa.gz, contains a consensus representation of the target organism.
-
-The two sequencing read files consist of two files with a fixed sequence length of 10 bp and 30 bp.
-
-~~~bash
-L10.fq.gz
-L30.fq.gz
-~~~
-
-~~~bash
-Hercule.fq.gz
-Poirot.fq.gz
-~~~
-
-We recommend that you finish/look at the exercises from day1 and day2 for inspiration for how to solve the following questions.
 
 NOTE before you start:
 You can either copy the four sequencing files and the reference genome into your own directory or you can specify the full path of the file when you are performing the data analysis.
