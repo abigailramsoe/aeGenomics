@@ -48,6 +48,8 @@ Repeat the above steps exercise with the two new filtered bam files. How do the 
 ## PART 2 - Data analysis:
 In this part you are given two compressed FASTQ files in the directory /TEACHING/BIOINF23/day3/
 
+One of these files is ancient, and one is modern. They are both reads from the pathogen <i>Pseudomonas aeruginosa</i> (reference genome fasta: paeruginosa.fasta.gz)
+
 ~~~bash
 jessica.fastq.gz
 fletcher.fastq.gz 
@@ -63,7 +65,7 @@ The goal is to ascertain which of the files (Jessica or Fletcher) belongs to the
 
 3. What is the mean length of the reads before and after trimming?
 
-4. Perform bwa alignment using aln and samse. For each sample, sort the sam file, save it as a bam, and index it. Remember that the reference is the same as the previous exercise. 
+4. Perform bwa alignment using aln and samse. For each sample, sort the sam file, save it as a bam, and index it. Remember that the reference is NOT the same as the previous exercise. 
    
 6. For each sample, create new bam files with only the aligned reads. What proportion of reads remain?
    
