@@ -5,9 +5,7 @@ The sequencing files you will need to map are single-end NGS data two different 
 ## The data is located on emily.popgen.dk at /TEACHING/BIOINF23/adv_binf_2023_week1/day3
 
 NOTE before you start:
-You can either copy the four sequencing files and the reference genome into your own directory or you can specify the full path of the file when you are performing the data analysis.
-
-Before you try with the different commands, you should try to run them with no arguments - this will show you the help page giving you an explanation of the different parameters and examples on how to run the command. 
+You can either copy the files four sequencing files and the reference genome into your own directory or you can specify the full path of the file when you are performing the data analysis.
 
 
 ## PART 1  - Mapping Statistics
@@ -20,11 +18,7 @@ Both of these files are reads from the organism <i>Mycobacterium leprae</i>.
 
 You will also find the reference sequence to map against mleprae.fasta.gz.
 
-Due to the simulation software used, the read ID contains the information of the positions for which the
-sequence originates. Once aligned, there can potentially be differences between the true chromosomal
-position and the position it is aligned to, we call this mis-alignment.
-e.g. @T0_RID0_S0_NZ_CP029543.1:2084294-2084323_length:30_R1 is a read (ID) originating from
-chromosome NZ_CP029543.1 from position 2084294-2084323
+Due to the simulation software used, the read ID contains the information of the positions for which the sequence originates. Once aligned, there can potentially be differences between the true chromosomal position and the position it is aligned to, we call this mis-alignment. e.g. @T0_RID0_S0_NZ_CP029543.1:2084294-2084323_length:30_R1 is a read (ID) originating from chromosome NZ_CP029543.1 from position 2084294-2084323
 
 We can use this fact to investigate whether the reads generated are mapping to the correct position by
 comparing the position in the read ID to the position in the bam file.
@@ -50,9 +44,6 @@ Use this script to find out how many reads map correctly and incorrectly in the 
 
 Repeat the above steps exercise with the two new filtered bam files. How do the numbers differ?
 
-7. Is the proportion of incorrectly mapped reads greater or smaller in the original bams or the quality filtered bams? 
-8. Why do you think that is?
-9. Given the results here, do you think it is relevant to include mapping filters in downstream analysis?
 
 ## PART 2 - Data analysis:
 In this part you are given two compressed FASTQ files in the directory /TEACHING/BIOINF23/day3/
