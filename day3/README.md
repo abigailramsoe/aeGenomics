@@ -10,11 +10,11 @@ You can either copy the four sequencing files and the reference genome into your
 Before you try with the different commands, you should try to run them with no arguments - this will show you the help page giving you an explanation of the different parameters and examples on how to run the command. 
 
 
-## PART1  - Mapping Statistics
+## PART 1  - Mapping Statistics
 
 There are two fastq.gz files in the directory /TEACHING/BIOINF23/assignment1_mapping.
 
-One is called L10.fq.gz and contains single end reads of length 10, and one is called L30.fq.gz and has reads of length 30. You will align both of these files and investigate the effect of read length on the resulting mapped reads. 
+One is called l10.fastq.gz and contains single end reads of length 10, and one is called l30.fastq.gz and has reads of length 30. You will align both of these files and investigate the effect of read length on the resulting mapped reads. 
 
 Both of these files are reads from the organism <i>Mycobacterium leprae</i>. 
 
@@ -29,7 +29,7 @@ chromosome NZ_CP029543.1 from position 2084294-2084323
 We can use this fact to investigate whether the reads generated are mapping to the correct position by
 comparing the position in the read ID to the position in the bam file.
 
-## QUESTION
+## Questions:
 
 1. How large (in base pairs) is the bacterial reference genome?
 
@@ -43,7 +43,7 @@ comparing the position in the read ID to the position in the bam file.
 
 Use this script to find out how many reads map correctly and incorrectly in the two bam files 
 ~~~bash
-/TEACHING/BIOINF22/adv_binf_2023_week1/day3/get_stats.sh l30.bam
+/TEACHING/BIOINF23/adv_binf_2023_week1/day3/get_stats.sh l30.bam
 ~~~
 
 6. Now create two new bam files where you filter the reads so we only retain reads with a mapping quality of greater than or equal to 1. (Hint: look at the exercises from https://github.com/ANGSD/adv_binf_2023_week1/tree/main/day2).
@@ -54,7 +54,7 @@ Repeat the above steps exercise with the two new filtered bam files. How do the 
 8. Why do you think that is?
 9. Given the results here, do you think it is relevant to include mapping filters in downstream analysis?
 
-## PART 4 - Data analysis:
+## PART 2 - Data analysis:
 In this part you are given two compressed FASTQ files in the directory /TEACHING/BIOINF23/day3/
 
 ~~~bash
