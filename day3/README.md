@@ -33,7 +33,7 @@ comparing the position in the read ID to the position in the bam file.
 
 4. Filter out the unaligned reads and create new bam files that contain only mapped reads. Identify which flag to filter out on (https://broadinstitute.github.io/picard/explain-flags.html)
 
-5. By looking at the reads aligning and the chromosomal positions, we can calculate how many reads are mapped correctly with a 0 nucleotide difference between the origin in the read ID and the mapping coordinate. The script /TEACHING/BIOINF22/adv_binf_2023_week1/day3/get_stats.sh takes a bam file and outputs two numbers - firstly the number of reads that map correctly (i.e. those where the start position in the bam file matches the read ID), and then the number that do not map correctly.
+5. By looking at the reads aligning and the chromosomal positions, we can calculate how many reads are mapped correctly with a 0 nucleotide difference between the origin in the read ID and the mapping coordinate. The script /TEACHING/BIOINF23/adv_binf_2023_week1/day3/get_stats.sh takes a bam file and outputs two numbers - firstly the number of reads that map correctly (i.e. those where the start position in the bam file matches the read ID), and then the number that do not map correctly.
 
 Use this script to find out how many reads map correctly and incorrectly in the two bam files 
 ~~~bash
