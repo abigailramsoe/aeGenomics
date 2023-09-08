@@ -38,6 +38,7 @@ comparing the position in the read ID to the position in the bam file.
 Use this script to find out how many reads map correctly and incorrectly in the two bam files 
 ~~~bash
 /TEACHING/BIOINF23/adv_binf_2023_week1/day3/get_stats.sh l30.bam
+or ./get_stats.sh l30.bam
 ~~~
 
 6. Now create two new bam files where you filter the reads so we only retain reads with a mapping quality of greater than or equal to 1. (Hint: look at the exercises from https://github.com/ANGSD/adv_binf_2023_week1/tree/main/day2).
