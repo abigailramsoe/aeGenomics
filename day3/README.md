@@ -43,7 +43,7 @@ or ./get_stats.sh l30.bam
 
 6. Now create two new bam files where you filter the reads so we only retain reads with a mapping quality of greater than or equal to 1. (Hint: look at the exercises from https://github.com/ANGSD/adv_binf_2023_week1/tree/main/day2).
 
-Repeat the above steps exercise with the two new filtered bam files. How do the numbers differ?
+Repeat the above STEP 5 with the two new filtered bam files. How do the numbers differ?
 
 
 ## PART 2 - Data analysis:
