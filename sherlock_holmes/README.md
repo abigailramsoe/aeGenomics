@@ -116,7 +116,7 @@ What files are generated?
 2. Run mapDamage
    ``` mapDamage -i file.filtered.rmdup.bam -r  paeruginosa.fasta.gz  --merge-libraries --no-stats```
 
-3. Look at the plots (use evince and then the path to the plots) 
+3. Look at the plots 
 
 
 
