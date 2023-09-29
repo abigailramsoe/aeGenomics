@@ -72,7 +72,7 @@ bwa index paeruginosa.fasta.gz
 What files are generated?
 
 2. Start to map the data
-``` bwa aln paeruginosa.fasta.gz file.trimmed.fastq > file.trimmed.sai ``` 
+``` bwa aln -t 5 paeruginosa.fasta.gz file.trimmed.fastq > file.trimmed.sai ``` 
 ``` bwa samse paeruginosa.fasta.gz file.trimmed.sai file.trimmed.fastq > file.trimmed.sam ``` 
    
 3. Convert the sam files to bam
