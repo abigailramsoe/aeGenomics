@@ -1,4 +1,4 @@
-# Day 1: NGS data - Workflow, formats and programs
+# Part 1: NGS data - Workflow, formats and programs
 
 **0. Getting started**
 
@@ -24,40 +24,12 @@
 ### Setting up the working environment
 
 
-You will be working on the virtual server. all commands in the following seven exercises will be relative to the base directory
-
-```sh
-day1
-├── data
-│   ├── alignment
-│   ├── fasta
-│   ├── fastq
-│   ├── reference_fasta
-│   └── reference_fasta_hs37d5
-├── exercises
-│   ├── alignment_formats
-│   ├── mapdamage
-│   ├── trimming
-│   └── variant_call_format
-├── Makefile
-└── README.md
-```
-
-Git is a version-control system software for tracking changes in a set of files, and is useful for coordinating work among multiple people working in collaboration. GitHub is one of the most popular git repository hosting services. Git is not covered within the scope of this class.
-
-Copy data to your local home folder
-```sh
-$ cp -r /TEACHING/BIOINF23/adv_binf_2023_week1 .
-```
-
-___
-___
-___
+```git clone https://github.com/abigailramsoe/aeGenomics.git```
 
 
 ## 1. Working with FASTA files
 
-Working directory: `day1/data/fasta`
+Working directory: `part1/data/fasta`
 
 
 **File extensions:** `.fasta` or `.fa` for generic FASTA (See [this link](https://en.wikipedia.org/wiki/FASTA_formathttps://en.wikipedia.org/wiki/FASTA_format) for details on other FASTA extensions `.fna` `.ffn` `.faa` and `.frn`)
@@ -175,7 +147,7 @@ ___
 ## 2. FASTQ files
 
 
-Working directory: `day1/data/fastq`
+Working directory: `part1/data/fastq`
 
 
 **File extensions:** `.fastq` or `.fq`
@@ -296,7 +268,7 @@ ___
 
 ## 3. Adapter trimming using [fastp](https://github.com/OpenGene/fastp)
 
-Working directory: `day1/exercises/trimming`
+Working directory: `part1/exercises/trimming`
 
 We will use `fastp` for adapter trimming. Some examples of other commonly used FASTQ preprocessing and adapter removal tools are [AdapterRemoval](https://adapterremoval.readthedocs.io/en/latest/) and [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
 
@@ -416,7 +388,7 @@ ___
 
 ## 4. Sequence Alignment/Map Formats: SAM, BAM and CRAM
 
-Working directory: `day1/exercises/alignment_formats`
+Working directory: `part1/exercises/alignment_formats`
 
 
 The SAM format consists of two main sections: the header and the alignment itself.
@@ -828,7 +800,7 @@ ___
 
 ## 5. Testing for Damage Patterns with [mapDamage](https://ginolhac.github.io/mapDamage/)
 
-Working directory: `day1/exercises/mapdamage`
+Working directory: `part1/exercises/mapdamage`
 
 ```bash
 $ mapDamage -i ../../data/alignment/DATA.bam -r ../../data/reference_fasta/chr21.fa.gz --no-stats
