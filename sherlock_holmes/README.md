@@ -53,6 +53,15 @@ The goal is to ascertain which of the files (Inspector or Barnaby) belongs to th
 7. What is the average read length of the trimmed files?
 ```cat file.trimmed.fastq | awk 'NR%4==2{sum+=length($0)}END{print sum/(NR/4)}```   
 
+a. as loop
+
+```
+for i in *.gz
+do
+echo ${i}
+zcat ${i}|awk '{s++}END{print s/4}'
+done
+```
 
 ## Exercise 5 
 
