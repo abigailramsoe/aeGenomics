@@ -64,24 +64,30 @@ done
 ```
 
 ## Exercise 5 
+0. Let us start by indexing the fasta
 
-1. Start to map the data
+ ```
+bwa index paeruginosa.fasta.gz
+```
+What files are generated?
+
+2. Start to map the data
 ``` bwa aln paeruginosa.fasta.gz file.trimmed.fastq > file.trimmed.sai ``` 
 ``` bwa samse paeruginosa.fasta.gz file.trimmed.sai file.trimmed.fastq > file.trimmed.sam ``` 
    
-2. Convert the sam files to bam
+3. Convert the sam files to bam
 ``` samtools view file.trimmed.sam -b > file.trimmed.bam ```
 
-3. Which files are bigger, the sam files or the bam files?
+4. Which files are bigger, the sam files or the bam files?
 ``` ls -l . ``` 
 
-4. Visually inspect the first 10 reads of a bam file
+5. Visually inspect the first 10 reads of a bam file
 ``` samtools view file.trimmed.bam|head ```
 
-5. Sort the bam files
+6. Sort the bam files
    ``` samtools sort file.trimmed.bam -o file.trimmed.sorted.bam ```
 
-6. How many reads do the bam files contain?
+7. How many reads do the bam files contain?
    ``` samtools view -c file.trimmed.sorted.bam ```
    
    
