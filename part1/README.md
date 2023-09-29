@@ -16,40 +16,15 @@
 
 
 
-Class working directory: `/TEACHING/BIOINF23/adv_binf_2023_week1`
-
-
 
 
 ## Getting started
 
 
-### Connecting to the server via SSH
-
-
-
-X11 forwarding method will allow you to start a graphical application on the remote system and forward this application's windows to your local system. We need to enable X11 forwarding to view the plots we will be generating for the exercises.
-
-We use `-X` option to enable X11 forwarding over SSH:
-
-```sh
-$ ssh -X <your_username>@<server_name_or_ip>
-```
-
-Replace with your remote server username. For example:
-
-
-```sh
-$ ssh -X isin@emily.popgen.dk
-```
-
-
-
-
 ### Setting up the working environment
 
 
-You will be working on the emily server. all commands in the following seven exercises will be relative to the base directory called `/TEACHING/BIOINF23/adv_binf_2023_week1`
+You will be working on the virtual server. all commands in the following seven exercises will be relative to the base directory
 
 ```sh
 day1
@@ -97,7 +72,7 @@ Line | Contains | Description | Example
 
 
 ```sh
-$ cat example.fasta 
+$ cat example.fasta
 >sequence1
 CACCTCCCCTCAGGCCGCATTGCAGTGGGGGCTGAGAGGAGGAAGCACCATGGCCCACCTCTTCTCACCCCT
 >sequence2
@@ -114,7 +89,7 @@ ACAGA
 
 ```sh
 $ samtools faidx example.fasta
-$ cat example.fasta.fai 
+$ cat example.fasta.fai
 sequence1	72	11	72	73
 sequence2	75	95	75	76
 sequence3	59	182	59	60
@@ -293,13 +268,13 @@ $ zcat DATA_L001_R1.fastq.gz |  echo $((`wc -l` / 4))
 or
 
 ```sh
-$ zcat DATA_L001_R1.fastq.gz | grep -c "^@" 
+$ zcat DATA_L001_R1.fastq.gz | grep -c "^@"
 1416689
 ```
 
 **2.6. How many times do we see the motif "GATTACA"?**
 ```sh
-$ zcat DATA_L001_R1.fastq.gz | grep -c "GATTACA" 
+$ zcat DATA_L001_R1.fastq.gz | grep -c "GATTACA"
 1147
 ```
 
@@ -326,15 +301,15 @@ Working directory: `day1/exercises/trimming`
 We will use `fastp` for adapter trimming. Some examples of other commonly used FASTQ preprocessing and adapter removal tools are [AdapterRemoval](https://adapterremoval.readthedocs.io/en/latest/) and [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
 
 ```sh
-fastp --in1 ../../data/fastq/DATA_L001_R1.fastq.gz \ 
---in2 ../../data/fastq/DATA_L001_R2.fastq.gz \ 
---out1 DATA_L001_R1_trimmed.fastq.gz \ 
---out2 DATA_L001_R2_trimmed.fastq.gz \ 
---merge \ 
---merged_out DATA_L001_merged_trimmed.fastq.gz \ 
+fastp --in1 ../../data/fastq/DATA_L001_R1.fastq.gz \
+--in2 ../../data/fastq/DATA_L001_R2.fastq.gz \
+--out1 DATA_L001_R1_trimmed.fastq.gz \
+--out2 DATA_L001_R2_trimmed.fastq.gz \
+--merge \
+--merged_out DATA_L001_merged_trimmed.fastq.gz \
 --unpaired1 DATA_L001_unpaired_R1.fastq.gz \
---unpaired2 DATA_L001_unpaired_R2.fastq.gz \ 
---length_required 30 \ 
+--unpaired2 DATA_L001_unpaired_R2.fastq.gz \
+--length_required 30 \
 --detect_adapter_for_pe
 ```
 - `--out1` and `--out2` outputs the reads that cannot be merged successfully, but both pass all the filters.
@@ -444,7 +419,7 @@ ___
 Working directory: `day1/exercises/alignment_formats`
 
 
-The SAM format consists of two main sections: the header and the alignment itself. 
+The SAM format consists of two main sections: the header and the alignment itself.
 
 
 **1. Header:** The header consists of the lines beginning with a `@` symbol, and includes details regarding the reference sequence used in alignment.
@@ -470,7 +445,7 @@ There can be one or more lines that start `@SQ` to describe the reference sequen
 **2. Alignment:** Each line contains 11 fields (all required) and the fields are separated by tab symbols. The fields are:
 
 Column index | Field Name | Type | Description
---- | --- | --- | --- 
+--- | --- | --- | ---
 0 | QNAME | String | Query sequence name
 1 | FLAG | Integer | Bitwise flag
 2 | RNAME | String | Reference sequence name
@@ -561,9 +536,9 @@ $ samtools index DATA.bam
 ```
 
 
-**4.7. Get mapped reads and write to a BAM file named `DATA_mapped.bam`, and a CRAM file named `DATA_mapped.cram`. What are the file sizes of the BAM and CRAM files? Are they different, if so, why?** 
+**4.7. Get mapped reads and write to a BAM file named `DATA_mapped.bam`, and a CRAM file named `DATA_mapped.cram`. What are the file sizes of the BAM and CRAM files? Are they different, if so, why?**
 
-We need to use `-T` to provide the reference sequence used in alignment with `-C` to convert a BAM file into a CRAM file. 
+We need to use `-T` to provide the reference sequence used in alignment with `-C` to convert a BAM file into a CRAM file.
 
 `-F` corresponds to "exclude reads with flag \<INT\>"
 ```sh
@@ -574,7 +549,7 @@ $ du -sh DATA_mapped.{bam,cram}
 100K	DATA_mapped.cram
 ```
 
-**4.8. Count the number of unmapped reads** 
+**4.8. Count the number of unmapped reads**
 
 `-f` corresponds to "only include reads with flag \<INT\>"
 ```sh
@@ -601,7 +576,7 @@ $ samtools view -c DATA_HLCS.cram
 You can save the output as an html file and view it using `firefox --no-remote`
 ```sh
 $ samtools tview DATA.bam -p chr21:14338386-14338400 -d html >> DATA_chr21_14338386-14338400_tview.html
-$ firefox --no-remote DATA_chr21_14338386-14338400_tview.html 
+$ firefox --no-remote DATA_chr21_14338386-14338400_tview.html
 ```
 or you can directly view it in command-line:
 ```sh
@@ -724,7 +699,7 @@ $ plot-bamstats DATA_stats.txt -p DATA_stats
 $ samtools quickcheck DATA.bam && echo "Data looks OK" || echo "Data is corrupted"
 Data looks OK
 
-$ samtools quickcheck -vvv DATA.bam 
+$ samtools quickcheck -vvv DATA.bam
 verbosity set to 3
 checking DATA.bam
 opened DATA.bam
@@ -735,7 +710,7 @@ DATA.bam has good EOF block.
 $ samtools quickcheck DATA_bad.bam && echo "Data looks OK" || echo "Data is corrupted"
 Data is corrupted
 
-$ samtools quickcheck -vvv DATA_bad.bam 
+$ samtools quickcheck -vvv DATA_bad.bam
 verbosity set to 3
 checking DATA_bad.bam
 opened DATA_bad.bam
@@ -763,7 +738,7 @@ Column index | Contains | Details | Example
 --- | --- | --- | ---
 0 | Sequence ID | Name of the sequence | chr21
 1 | Coordinate | 1-based coordinate of each site | 9416492
-2 | Reference base  | Corresponding base in the reference genome (generated by `-f` option)| g 
+2 | Reference base  | Corresponding base in the reference genome (generated by `-f` option)| g
 3 | Read count |  Number of reads covering the position | 1
 4 | Read bases | Read bases column contains information on whether if a read base was matched, mismatched, was inserted or deleted with respect to the reference. It also contains information about whether the read base was on the positive or negative strand with respect to the reference, whether a read base was at the start or at the end of a read. `.` corresponds to match to the reference base on the positive strand, `,` corresponds to match on the negative strand.`^]`  indicates that the base was at the beginning of a read, and the `$` indicates that the base was at the end of a read.| ^],
 5 | Base qualities | Base quality score at position | E
@@ -870,7 +845,7 @@ DATA.mapDamage/
 └── Runtime_log.txt
 ````
 
-Inspect the damage patterns. 
+Inspect the damage patterns.
 - What would you expect to see if the sample was modern?
 - What would you expect to see if the sample was an ancient sample that has a library preparation with [USER treatment](https://international.neb.com/products/m5505-user-enzyme#Product%20Information)?
 
@@ -894,7 +869,7 @@ $ bcftools call -c NA06985.mpileup > NA06985.vcf
 # Call only for variant sites
 $ bcftools call -v -c NA06985.mpileup > NA06985_variant.vcf
 
-$ head NA06985.vcf 
+$ head NA06985.vcf
 ##fileformat=VCFv4.2
 ##FILTER=<ID=PASS,Description="All filters passed">
 ##bcftoolsVersion=1.3.1-98-ga6a7829+htslib-1.3.1-64-g74bcfd7
@@ -947,7 +922,7 @@ $ plot-vcfstats NA06985_vcfstats.txt -p NA06985
 
 ```sh
 $ bcftools query -f '%CHROM\t%POS\t%REF\t%ALT\t%AF\n' NA06985_with_allelefreqs.bcf > query.txt
-$ head query.txt 
+$ head query.txt
 1	13999984	T	.	.
 1	13999985	C	.	.
 1	13999986	C	.	.
@@ -974,9 +949,7 @@ ___
 If you still have some time left, try to answer these questions:
 - How many As, Cs, Gs, Ts and Ns are there in each FASTQ file?
 - How can we calculate the GC content using a FASTQ file?
-- How long is the reference genome? 
+- How long is the reference genome?
 - How many reads has their mates were unmapped?
 - How many reads are there that was aligned to a region included in 1000G sites with a mapping quality 30 as minimum?
 - How can we sort a BAM file by coordinates?
-
-
