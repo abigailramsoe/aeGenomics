@@ -8,7 +8,7 @@ conda activate day1
 
 The sequencing files you will need to map are single-end NGS data two different pathogens.
 
-In this part you are given two compressed FASTQ files in the directory /data/day1
+In this part you are given two compressed FASTQ files in the directory course/data/day1
 
 One of these files is ancient, and one is modern. They are both reads from the pathogen <i>Pseudomonas aeruginosa</i> (reference genome fasta: paeruginosa.fasta.gz)
 
