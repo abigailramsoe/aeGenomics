@@ -1,5 +1,11 @@
 # Sherlock Holmes exercise 
 
+## If you are using the course virtual webserver
+```
+conda activate day1
+```
+
+
 The sequencing files you will need to map are single-end NGS data two different pathogens.
 
 In this part you are given two compressed FASTQ files in the directory /data/day1
