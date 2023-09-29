@@ -7,7 +7,7 @@ The sequencing files you will need to map are single-end NGS data two different 
 NOTE before you start:
 You can either copy the files four sequencing files and the reference genome into your own directory or you can specify the full path of the file when you are performing the data analysis.
 
-In this part you are given two compressed FASTQ files in the directory /TEACHING/BIOINF23/day3/
+In this part you are given two compressed FASTQ files in the directory /data/day1
 
 One of these files is ancient, and one is modern. They are both reads from the pathogen <i>Pseudomonas aeruginosa</i> (reference genome fasta: paeruginosa.fasta.gz)
 
