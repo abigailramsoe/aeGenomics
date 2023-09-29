@@ -100,7 +100,7 @@ What files are generated?
    ``` samtools view -c file.filtered.bam ```
 
 3. Remove duplicate reads
-   ``` samtools view -b -F1024 file.filtered.bam > file.filtered.rmdup.bam ```
+   ``` samtools rmdup file.filtered.bam file.filtered.rmdup.bam ```
 
 4. How many reads were duplicates?
    ``` samtools flagstat file.filtered.bam ```
